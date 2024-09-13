@@ -1,0 +1,299 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* navigation bar section */
+
+.nav-container{
+    padding: 15px 100px;
+    background-color:white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+
+
+
+
+
+.nav-container .nav-links ul li{
+    display: inline-block;
+   
+    margin-right: 25px;
+    
+    position: relative;
+    transition: all 0.4s ;
+}
+
+.nav-container .nav-links ul li::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 4px;
+    left: 0;
+    bottom: -10px;
+    background-color: red;
+    
+}
+
+.nav-container .nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.nav-container .nav-links ul li a:hover{
+    color: dodgerblue;
+}
+
+.nav-links ul  li a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.logo img{
+    width: 100px;
+}
+
+
+
+/* admin login */
+
+
+
+.admin-login{
+    border: 3px solid rgb(0, 28, 113);
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+
+
+.admin-login i{
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.admin-login a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* hero section */
+
+
+.hero{
+    height: 80vh;
+   
+
+    padding-top: 200px;
+    background-color: #f7f7f7;
+    
+ 
+
+  
+    
+}
+
+
+
+.hero-left{
+     width: 1000px;
+     height: auto;
+ 
+    padding: 100px;
+    
+}
+
+.hero-left h1{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+.hero-left ul li{
+    list-style: none;
+    line-height: 40px;
+
+}
+
+
+.hero-left ul li .check{
+    color: #006AE1;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 10px;
+    
+}
+
+
+
+
+
+
+
+
+.explore-btn button{
+    background-color:#006AE1;
+    border: none;
+    padding: 12px 20px 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+.explore-btn button:hover{
+    background-color:#4696f2 ;
+}
+
+
+
+
+footer{
+    background-color: darkblue;
+    color: white;
+    padding: 80px;
+    text-align: center;
+}
+
+
+footer a{
+    text-decoration: none;
+    color: #ccc;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color:dodgerblue;
+}
+
+
+
+/* about section */
+
+
+.about{
+    background-color: #f9e8e8;
+    height: auto;
+
+}
+
+.about h1{
+   
+    padding: 40px 0px;
+    text-align: center;
+    font-weight: bold;
+    color: goldenrod;
+}
+
+
+.about-ems{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    padding: 50px 100px;
+
+}
+
+.about-left{
+    width: 40%;
+    
+}
+
+.about-left img{
+
+    border-radius:20px;
+
+}
+
+
+.about-right{
+    width: 60%;
+
+    line-height: 35px;
+    text-align: justify;
+}
+
+
+/* enquriy btn */
+
+.enquery-btn{
+    border: 1px solid transparent;
+    border-radius: 5px;
+    
+    display: inline-block;
+    padding: 4px 12px;
+    margin-top: 30px;
+    background-color: rgb(0, 102, 255);
+    transition: all 0.15s ease;
+}
+
+.enquery-btn:hover{
+    background-color: #4696f2;
+}
+
+.enquery-btn a{
+    text-decoration: none;
+    color: white;
+}
+
+.enquery-btn i{
+    margin-left: 10px;
+}
+
+
+
+/* team css */
+
+.team{
+
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background-color: dodgerblue;
+    padding: 50px;
+}
+
+.team h1{
+    text-align: center;
+    color: goldenrod;
+    font-weight: bold;
+    padding: 20px 0px;
+}
