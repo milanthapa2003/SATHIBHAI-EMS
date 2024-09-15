@@ -1,0 +1,317 @@
+/* css for index.html */
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* navigation bar section */
+
+.nav-container {
+  padding: 15px 100px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.4);
+}
+
+.nav-container .nav-links ul li {
+  display: inline-block;
+
+  margin-right: 25px;
+
+  position: relative;
+}
+
+.nav-container .nav-links ul li::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 4px;
+  left: 0;
+  bottom: -10px;
+  background-color:rgb(3, 173, 226);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-container .nav-links ul li:hover::after {
+  width: 100%;
+}
+
+.nav-container .nav-links ul li a:hover {
+  color: black;
+}
+
+.nav-links ul li a {
+  text-decoration: none;
+  color: #6c757d;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+}
+
+
+ .logo h1{
+  
+  background: linear-gradient(to right, #ff7e5f, #0dbde9);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  cursor: pointer;
+  
+} 
+
+.logo img {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  border: 1px solid black;
+  background-color: black;
+  border-radius: 50%;
+  
+}  
+
+/* admin login */
+
+.admin-login {
+  border: 3px solid rgb(3, 173, 226);
+  background-color: rgb(3, 173, 226);
+  padding: 8px 16px;
+  border-radius: 32px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.admin-login:hover {
+  border: 3px solid rgb(19, 184, 234);
+  
+  color: white;
+  box-shadow: 0px 0px 10px rgb(3, 173, 226);
+}
+
+.admin-login i {
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 10px;
+  color: white;
+}
+
+.admin-login a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* hero section */
+
+.hero {
+  height: 100vh;
+
+  padding-top: 200px;
+}
+
+.hero-left {
+  width: 1000px;
+  height: auto;
+
+  padding: 100px;
+}
+
+.hero-left h1 {
+  background: linear-gradient(to right, #f6f2f1, #0db9e9);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Pacifico" sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  cursor: pointer;
+}
+
+.hero-left ul li {
+  font-size: 20px;
+}
+
+.hero-left ul {
+  padding-left: 0px;
+}
+
+.hero-left ul li {
+  list-style: none;
+  line-height: 40px;
+}
+
+.hero-left ul li .check {
+  color: dodgerblue;
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.explore-btn button {
+  background-color: #006ae1;
+  border: none;
+  padding: 12px 20px 10px;
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.explore-btn button:hover {
+  background-color: #4696f2;
+}
+
+/* about section */
+
+.about {
+  background-color:rgb(255, 255, 255);
+  height: auto;
+}
+
+.about h1 {
+  text-align: center;
+  font-weight: bold;
+  color: goldenrod;
+  padding-top: 30px;
+}
+
+.about-ems {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 30px 100px;
+}
+
+.about-left {
+  width: 40%;
+}
+
+.about-left img {
+  width: 90%;
+  height: auto;
+  border-radius: 20px;
+  
+}
+
+.about-right {
+ 
+  width: 60%;
+
+  line-height: 35px;
+  text-align: justify;
+}
+
+.about-right p{
+  color: black;
+}
+
+.about-right .enquiry-btn {
+  border: 2px solid rgb(22, 207, 22);
+  background-color: rgb(22, 207, 22);
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.enquiry-btn a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.enquiry-btn i {
+  margin-left: 5px;
+}
+
+
+
+.enquiry-btn:hover {
+  
+  background-color: rgb(88, 241, 88);
+  border:2px solid transparent;
+}
+
+/* css for team section */
+
+.team {
+  width: 100%;
+  height: auto;
+
+  background-color:rgb(242, 238, 238);
+  padding: 50px;
+}
+
+.team h1 {
+  text-align: center;
+  color: goldenrod;
+  font-weight: bold;
+  padding: 20px 0px;
+}
+
+.team-member {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.team-member img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+.team-member h5 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+.team-member p {
+  color: #6c757d;
+}
+
+/* css footer section */
+
+footer {
+  background-color: rgb(11, 27, 48);
+  color: white;
+  padding: 40px 0px;
+  text-align: center;
+}
+
+footer h2 {
+  background: linear-gradient(to right, #ff7e5f, #0dbde9);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+footer a {
+  text-decoration: none;
+  color: darkorange;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: rgb(6, 199, 83);
+}
