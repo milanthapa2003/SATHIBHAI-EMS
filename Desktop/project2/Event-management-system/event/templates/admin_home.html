@@ -1,0 +1,171 @@
+{% include 'admin_nav.html' %} {% load static %}
+
+<!DOCTYPE html>
+<html lang="en" class="no-focus">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Management - Admin Dashboard</title>
+    <link
+      rel="stylesheet"
+      id="css-main"
+      href="{% static 'css1/codebase.min.css' %}"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        color: #333;
+      }
+
+      .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: calc(100vh - 100px); /* Adjust for footer height */
+        padding: 20px;
+      }
+
+      .dashboard-boxes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .dashboard-box {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        width: 250px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .dashboard-box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .dashboard-box i {
+        font-size: 50px;
+        color: #007bff;
+      }
+
+      .dashboard-box h3 {
+        margin: 15px 0;
+        font-size: 24px;
+      }
+
+      .dashboard-box p {
+        color: #777;
+        font-size: 16px;
+      }
+
+      footer {
+        background-color: #003366;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+      }
+
+      footer p {
+        margin: 0;
+        font-size: 16px;
+      }
+
+      footer a {
+        color: #ffeb3b;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      footer .footer-logo {
+        font-size: 24px;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+
+      footer .footer-logo h2 {
+        background: linear-gradient(to right, #ff7e5f, #0dbde9);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: "Pacifico", cursive;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- Page Content -->
+    {% block main %}
+    <div class="content">
+      <div class="dashboard-boxes">
+        <a href="{% url 'viewEnquiry' %}" class="dashboard-box">
+          <i class="fas fa-book-reader"></i>
+          <h3>{{ en }}</h3>
+          <p>Total Enquiry</p>
+        </a>
+        <a href="{% url 'viewPlan' %}" class="dashboard-box">
+          <i class="fas fa-book"></i>
+          <h3>{{ p }}</h3>
+          <p>Total Plan</p>
+        </a>
+        <a href="{% url 'viewEquipment' %}" class="dashboard-box">
+          <i class="fas fa-edit"></i>
+          <h3>{{ eq }}</h3>
+          <p>Total Event</p>
+        </a>
+        <a href="{% url 'viewMember' %}" class="dashboard-box">
+          <i class="fas fa-folder-open"></i>
+          <h3>{{ m }}</h3>
+          <p>Total Member</p>
+        </a>
+      </div>
+    </div>
+    {% endblock %}
+
+    <footer>
+      <div class="footer-logo"><h2>Sathibhai EMS</h2></div>
+      <p>&copy; All Rights Reserved | Designed by <a href="#">sathibhai</a></p>
+    </footer>
+
+    <!-- Codebase Core JS -->
+    <script src="{% static 'js1/core/jquery.min.js' %}"></script>
+    <script src="{% static 'js1/core/popper.min.js' %}"></script>
+    <script src="{% static 'js1/core/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js1/core/jquery.slimscroll.min.js' %}"></script>
+    <script src="{% static 'js1/core/jquery.scrollLock.min.js' %}"></script>
+    <script src="{% static 'js1/core/jquery.appear.min.js' %}"></script>
+    <script src="{% static 'js1/core/jquery.countTo.min.js' %}"></script>
+    <script src="{% static 'js1/core/js.cookie.min.js' %}"></script>
+    <script src="{% static 'js1/codebase.js' %}"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+
+    <!-- Page JS Plugins -->
+    <script src="{% static 'js1/plugins/chartjs/Chart.bundle.min.js' %}"></script>
+
+    <!-- Page JS Code -->
+    <script src="{% static 'js1/pages/be_pages_dashboard.js' %}"></script>
+  </body>
+</html>
